@@ -14,10 +14,14 @@ if [ $value -eq "200" ]
 then
 	echo "GET request sucessfull!"
 	echo "Testing Done... performing cleanup..."
+	docker stop cinemapp
+	docker rm cinemapp
 	exit 0
 else
 	echo "GET request FAILED !!!"
 	echo "Testing Done... perform cleanup..."
+	docker stop cinemapp
+	docker rm cinemapp
 	exit -1
 fi
 
