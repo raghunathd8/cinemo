@@ -1,0 +1,31 @@
+{
+  "name": "cinemo-public",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cinemo GmbH",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.464.0",
+    "axios": "^0.18.0",
+    "express": "^4.17.1",
+    "q": "^1.5.1"
+  },
+  "config": {
+    "service": {
+      "port": 80
+    },
+    "dependencies": {
+      "cinemoInternalUrl": "http://10.10.2.10:8080"
+    },
+    "kinesis": {
+      "region": "eu-central-1",
+      "endpoint": "https://kinesis.eu-central-1.amazonaws.com",
+      "streamName": "cinemo-kinesis-stream",
+      "partitionKey": "cinemo_pkey1"
+    }
+  }
+}
