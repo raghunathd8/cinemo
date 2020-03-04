@@ -10,8 +10,11 @@ value=$( wget --spider -S "http://localhost:8181/api/health" 2>&1 | grep "HTTP/"
 if [ $value -eq "200" ]
 then
 	echo "GET request sucessfull!"
+	echo "Testing Done... perform cleanup..."
+	exit 0
 else
 	echo "GET request FAILED !!!"
+	echo "Testing Done... perform cleanup..."
+	exit -1
 fi
 
-echo "Testing Done... perform cleanup..."
