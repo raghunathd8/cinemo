@@ -21,18 +21,21 @@ then
 		echo "Test-2 = = GET request FAILED !!!"
 		docker stop cinemapp
 	        docker rm cinemapp
+		docker rmi cinemapp
 		exit -1
 	fi
 
 	echo "Testing Done... performing cleanup..."
 	docker stop cinemapp
 	docker rm cinemapp
+	docker rmi cinemapp
 	exit 0
 else
 	echo "GET request FAILED !!!"
 	echo "Testing Done... perform cleanup..."
 	docker stop cinemapp
 	docker rm cinemapp
+	docker rmi cinemapp
 	exit -1
 fi
 
